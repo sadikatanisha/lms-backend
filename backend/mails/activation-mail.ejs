@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CREATI</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+      .email-wrapper {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .email-header {
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      .email-body {
+        padding: 20px;
+      }
+      h1,
+      h2,
+      p {
+        margin: 0;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 20px;
+        color: #007bff;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      .activation-code {
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        font-size: 24px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <div class="email-header">
+        <h1>Welcome to CREATI</h1>
+      </div>
+      <div class="email-body">
+        <p>Hello <%=user.name%>,</p>
+        <p>
+          Thank you for registering with CREATI. To activate your account,
+          please use the following activation code:
+        </p>
+        <div class="activation-code"><%= activationCode %></div>
+        <p>Please enter this code activate within the next 5 minutes.</p>
+      </div>
+    </div>
+  </body>
+</html>
